@@ -34,7 +34,7 @@ event_streams_topic=$2
 echo Using provided topic \"$event_streams_topic\"
 
 echo Creating code engine project (this may take one or two minutes)...
-set +e; ibmcloud ce project delete --name iot-kafka-generator --force &> /dev/null; set -e
+set +e; ibmcloud ce project delete --name iot-kafka-generator --force --hard &> /dev/null; set -e
 ibmcloud ce project create --name iot-kafka-generator 
 
 echo Creating code engine job with docker image torsstei/iot-kafka-generator...
