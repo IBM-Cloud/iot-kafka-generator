@@ -29,3 +29,7 @@ Finally the script sets up a cron schedule that submits the job every two minute
 You need to be logged on to IBM Cloud with the ibmcloud CLI tool in order to run the test script because it retrieves the required credentials from your Event Streams instance.
 
 The script expects as first parameter the name (or alternatively the unique CRN instance ID) of your event streams instance. The second parameter is the topic name in your Event Streams instance that you want to send the messages to.
+
+## Consume the IOT messages
+
+You can use the stream data landing feature of IBM SQL Query service in IBM Cloud as described in [this tutorial](https://www.ibm.com/cloud/blog/stream-landing-from-event-streams-kafka-service-to-ibm-cloud-data-lake-on-object-storage) in order to automatically land the produced IOT messages from Event Streams into Parquet files on COS to build a cloud data lake of IOT data. 
