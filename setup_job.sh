@@ -38,7 +38,7 @@ set +e; ibmcloud ce project delete --name iot-kafka-generator --force --hard &> 
 ibmcloud ce project create --name iot-kafka-generator 
 
 echo Creating code engine job with docker image torsstei/iot-kafka-generator...
-ibmcloud ce job create --name iot-kafka-generator-job  --image docker.io/torsstei/iot-kafka-generator:latest \
+ibmcloud ce job create --name iot-kafka-generator-job   --maxexecutiontime 60 --image docker.io/torsstei/iot-kafka-generator:latest \
  -e KAFKA_BROKERS_SASL=$event_streams_kafka_brokers \
  -e TOPIC_NAME=$event_streams_topic \
  -e PASSWORD=$event_streams_password
