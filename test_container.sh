@@ -32,5 +32,5 @@ event_streams_topic=$2
 echo Using provided topic \"$event_streams_topic\"
 
 
-docker run -e KAFKA_BROKERS_SASL=$event_streams_kafka_brokers -e TOPIC_NAME=$event_streams_topic -e PASSWORD=$event_streams_password iot-kafka-generator
+docker run -e KAFKA_BROKERS_SASL=$event_streams_kafka_brokers -e TOPIC_NAME=$event_streams_topic -e PASSWORD=$event_streams_password torsstei/iot-kafka-generator
 
