@@ -6,7 +6,7 @@ Instead of building the docker image from scratch you can also use the [pre-buil
 
 ## IOT Message generator
 
-The script `run-kafkacat-gen.sh` is the actual generator of the IOT messages. It takes a sample message template file (`sample-payload-iotmessages.json`) updates it with the current timestamp as a the message times and then uses `kafkacat` in order to send the json messages to Kafka. The entire generator setup is assembled into a docker image.
+The script `run-kafkacat-gen.sh` is the actual generator of the IOT messages. It takes a sample message template file (`sample-payload-iotmessages.json`) updates it with the current timestamp as the message times and then uses `kafkacat` in order to send the json messages to Kafka. The entire generator setup is assembled into a docker image.
 
 ## Build the image
 
